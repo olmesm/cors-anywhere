@@ -8,7 +8,9 @@ A NodeJS proxy which adds CORS headers to the proxied request.
 ## Running
 
 ```bash
-docker run --ir -it -p 8080:8080 ghcr.io/olmesm/reflector-image:main
+docker run --rm -it -p 8080:8080 ghcr.io/olmesm/cors-anywhere:latest
+# append `--platform linux/amd64` if mac m1/arm
+docker run --rm -it -p 8080:8080 ghcr.io/olmesm/cors-anywhere:latest --platform linux/amd64
 ```
 
 The url to proxy is literally taken from the path, validated and proxied. The protocol
